@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-2</title>
+  <link rel="stylesheet" href="../css/my.css">
+  <style>
+    #info {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+    <form>
+        姓名：<input type="text" required/>
+        <input type="submit" value="登录"/>
+    </form>
+
+    <hr />
+    <datalist id="username">
+        <option>张三</option>
+        <option>李四</option>
+    </datalist>
+    姓名：<input type="text" list="username" />
+
+    <hr />
+    姓名：<input type="text" id="uname"/>
+        <input type="button" value="登录" onclick="javascript:check();"/>
+        <output id="info" name="info"></output>
+
+    
+    <hr />
+    关键字：<input type="search" placeholder="请输入关键字：" />
+
+    <hr />
+    <form>
+    电子邮件：<input type="email" required />
+        <input type="submit"/>
+    </form>
+
+    <hr />
+    <form>
+        URL:<input type="url"/>
+        <input type="submit"/>
+    </form>
+
+    <hr />
+    日期：<input type="datetime-local"/>
+
+    <hr />
+    年龄：<input type="number" min="1" max="100" value="5"/>
+
+    <hr />
+    <input type="range" min="1" max="10" value="5"/>
+    <input type="color" />
+
+    <hr />
+    <form>
+    <!--正则表达式-->
+    手机号码：<input type="tel" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" />
+            <input type="submit"/>
+    </form>
+
+    <hr />
+    <!-- 文件 -->
+    <input type="file" />
+
+    <script>
+        function check() {
+            var uname = document.getElementById("uname").value;
+            if(uname == "") {
+                document.getElementsByName("info")[0].value="用户名不能为空";      
+            } else {
+                document.getElementsByName("info")[0].innerHTML="";
+            }
+        }
+    </script>
+
+</body>
+</html>
