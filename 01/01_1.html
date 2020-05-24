@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04-1</title>
+  <link rel="stylesheet" href="../css/my.css">
+</head>
+<body onload="draw()">
+    <!-- 合并标题 -->
+    <div>
+        <header>
+            <h1>主标题</h1>
+            <h1>副标题</h1>
+        </header>    
+    </div>
+    <article>
+        <p>第一段内容</p>
+        <p>第二段内容</p>
+        <p>第三段内容</p>
+    </article>
+
+    <header>几首诗句</header>
+    <section>
+        <div>
+            <article>
+                <header>诗名</header>
+                <p>内容</p>
+            </article>
+        </div>
+        <div>
+            <article>
+                <header>诗名</header>
+                <p>内容</p>
+            </article>
+        </div>
+        <div>
+            <article>
+                <header>诗名</header>
+                <p>内容</p>
+            </article>
+        </div>
+    </section>
+    <!-- 导航/ -->
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">简介</a>
+    </nav>
+
+    <video src="../video/1.mp4" controls>
+        当前浏览器不支持播放视频
+    </video>
+
+    <video controls poster="../img/">
+        <!-- 浏览器自动检索列表里得视频，能播放那个就播放那个 -->
+        <source src="../video/1.mp4">
+        <source src="../video/1.mp4">
+    </video>
+
+    <!-- 画布 -->
+    <canvas id="tutorial" width="150" height="150"></canvas>
+
+
+
+
+    <!-- 画布函数 -->
+    <script>
+        function draw() {
+            var canvas = document.getElementById("tutorial");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle="rgb(200,0,0)";
+                ctx.fillRect(10,10,55,50);
+                ctx.fillStyle="rgba(0,0,200,0.5)";
+                ctx.fillRect(30,30,55,50);
+
+            }
+        }
+    </script>
+
+</body>
+</html>
