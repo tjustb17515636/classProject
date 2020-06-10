@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07-1</title>
+<link rel="stylesheet" href="../css/my.css">
+<style>
+    #content {
+        display: box;/*盒布局*/
+        box-orient: horizontal;/*水平摆放*/
+
+        display: -webkit-box;/*webkit是一种浏览器的引擎用于谷歌和苹果*/
+        -webkit-box-orient: horizontal;
+
+        display: -moz-box;/*Gecko的浏览器适应*/
+        -moz-box-orient: horizontal;
+    }
+    #content p {
+        /*margin 是与其他元素的距离*/
+        margin: 10px;
+        /*padding 是div内部内容与边框的距离*/
+        padding: 15px;
+        line-height: 50px;
+        text-align: center;
+        /* 边框的大小，颜色，实心 */
+        border: 1px #000000 solid;
+        background-color: aliceblue; 
+    }
+</style>
+</head>
+<body>
+    <div id="content">
+        <p>窗前明月光，疑是地上霜。<br />举头望明月，低头思故乡。</p>
+        <p>窗前明月光，疑是地上霜。<br />举头望明月，低头思故乡。</p>
+        <p>窗前明月光，疑是地上霜。<br />举头望明月，低头思故乡。</p>
+    </div>
+</body>
+</html>
